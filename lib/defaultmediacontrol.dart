@@ -54,7 +54,7 @@ class DefaultMediaController with MediaController {
     _displayModel = 1;
     updateUI();
     await Navigator.of(context).push(PageRouteBuilder(
-      settings: RouteSettings(isInitialRoute: false),
+      // settings: RouteSettings(isInitialRoute: false),
       pageBuilder: (BuildContext context, Animation<double> animation,
           Animation<double> secondaryAnimation) {
         return new FadeTransition(
@@ -104,6 +104,9 @@ class DefaultMediaController with MediaController {
           _floatWindow();
         }
         break;
+      case 'toggleFullScreen':
+        enterFullScreen();
+        break;  
       default:
         break;
     }
