@@ -106,7 +106,10 @@ class DefaultMediaController with MediaController {
         break;
       case 'toggleFullScreen':
         enterFullScreen();
-        break;  
+        break; 
+      case 'exitFullScreen':
+        exitFullScreen();
+        break; 
       default:
         break;
     }
